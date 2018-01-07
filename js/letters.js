@@ -17,8 +17,24 @@ var counter = {
 
 function countLetters(counter, sample_text){
   // FIX ME
+  let i = 0;
+  let j = 0;
+  let next = 0 + i;
+  var count = 0;
+  let text = sample_text.toLowerCase();
+  if(text.length === 0){
+    return ' ';
+  }
+  let letter = text.charAt(next);
+  
+    if( [letter] ){
+      counter[letter]++;
+    }
+    
+  i++; 
+  countLetters(counter, text.slice(i));
+  console.log(counter);
 }
-
 $(document).ready(function(){
   countLetters(counter, sample_text);
   $("#result").html(JSON.stringify(counter));

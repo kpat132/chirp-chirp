@@ -21,7 +21,7 @@ function countLetters(counter, sample_text) {
   sample_text = sample_text.toLowerCase();
   letter = sample_text.slice(0, 1);
 
-    if (sample_text === 0) {
+    if (sample_text.length === 0) {
       return '';
     }
 
@@ -30,9 +30,7 @@ function countLetters(counter, sample_text) {
       counter[key] += 1;
     }
   }
-  console.log(counter);
-
-  countLetters(counter, sample_tex)
+   countLetters(counter, sample_text.slice(1))
 
 }
 

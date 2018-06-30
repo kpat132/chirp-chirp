@@ -19,18 +19,19 @@ function countLetters(counter, sample_text) {
   let letter;
   // FIX ME
   sample_text = sample_text.toLowerCase();
-  letter = sample_text.slice(0, 1);
+  letter = sample_text.charAt(0);
 
-    if (sample_text.length === 0) {
-      return '';
-    }
+  if (sample_text.length == 0) {
+    console.log(counter);
+    return counter;
+  }
 
   for (key in counter) {
     if (key === letter) {
       counter[key] += 1;
     }
   }
-   countLetters(counter, sample_text.slice(1))
+  countLetters(counter, sample_text.slice(1))
 
 }
 
